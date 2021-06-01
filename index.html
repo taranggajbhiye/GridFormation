@@ -1,60 +1,37 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8" />
-    <title>Circle </title>
-     
-	<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?libraries=geometry"></script> 
+    <title>Circle</title>
 
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=geometry"></script>
 
-    <script type="text/javascript" src="form.js"> </script>
-    
+    <script type="text/javascript" src="form.js"></script>
+    <link rel="stylesheet" href="form.css" />
+  </head>
+  <body onload="initialize();">
+    <div class="header">
+      <div  class="header_input">
+        <input
+          id="radiuslength"
+          placeholder="Enter radius length"
+         
+        />
+      </div>
 
+      <div class="header_cursor">
+        <a href="#" onclick="return setListenerBuffer();">
+          Click here to pick a center
+        </a>
+      </div>
 
-    <style type="text/css">
-        .create_Circle {
-            background: url(buffer.png) no-repeat;
-            width: 41px;
-            margin: 0px 8px 0 0px;
-            float: left;
-            cursor: pointer;
-            z-index: 2;
-            height: 41px;
-        }
-
-        .remove_Circle {
-            background: url(close.png) no-repeat;
-            width: 41px;
-            margin: 0px 8px 0 0px;
-            float: left;
-            cursor: pointer;
-            z-index: 2;
-            height: 41px;
-        }
-    </style>
-</head>
-<body onload="initialize();">
-    <div>
-        <div>
-	            <input id="radiuslength" placeholder="Enter radius length" class='header_input'>
-        </div>
-	
-	<div>
-        <span>
-         <a href="#" onclick="return setListenerBuffer();">Click here to pick a center </a><br/>
-        </span>
-        <span>
-         <button onclick="savefile()">Save</button>
-        </span>
+      <div class="header_btn_text">
+        <h6>Click save button to generate download link.</h6>
+        <button onclick="savefile()" class="header_btn">Save</button>
+      </div>
     </div>
-	<p id="dlink">Click save button to generate download link.</p>
-	</div>
 
-	
-  <!--  <a href="#" onclick="RemoveCircleBuffer();">Click here to remove circle from the map</a> -->
-	
-    <div id="map-canvas" style="width: 1500px; height: 700px">
-    </div>
-</body>
+    <div id="map-canvas"></div>
+  </body>
 </html>
