@@ -35,15 +35,22 @@
     </style>
 </head>
 <body onload="initialize();">
-    
-	<input id="radiuslength" placeholder="Enter radius length">
+    <div>
+        <div>
+	            <input id="radiuslength" placeholder="Enter radius length" class='header_input'>
+        </div>
 	
-	
-	<!--<button onclick="createCircle()" id="btn1">Draw Circle</button>-->
-    <a href="#" onclick="return setListenerBuffer();">Click here to pick a center </a><br/>
-	<button onclick="savefile()">Save</button>
+	<div>
+        <span>
+         <a href="#" onclick="return setListenerBuffer();">Click here to pick a center </a><br/>
+        </span>
+        <span>
+         <button onclick="savefile()">Save</button>
+        </span>
+    </div>
 	<p id="dlink">Click save button to generate download link.</p>
-	
+	</div>
+
 	
   <!--  <a href="#" onclick="RemoveCircleBuffer();">Click here to remove circle from the map</a> -->
 	
